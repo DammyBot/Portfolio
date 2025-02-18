@@ -41,6 +41,7 @@ header>a {
     font-family: var(--monstserrat);
     font-size: 1.5em;
     transition: .3s ease;
+    font-size: 24px;
 }
 
 header>a:hover {
@@ -78,6 +79,129 @@ header>a:hover {
     color: white;
 }
 
+main {
+    text-align: center;
+    color: white;
+}
+
+main h1,
+main h2 {
+    font-family: var(--monstserrat);
+    padding: 10px;
+    font-size: 24px;
+}
+main h2 {
+    font-size: 20px;
+}
+main p,
+.content p {
+    font-family: var(--inter);
+    font-size: 14px;
+    padding: 5px;
+}
+
+.connect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.connect li {
+    padding: 5px;
+    margin: 5px;
+    transition: .3s ease;
+}
+
+.connect li:hover,
+.content button:hover,
+dialog button:hover {
+    transform: scale(1.1);
+    transition: .3s ease;
+}
+
+.connect li a {
+    color: white;
+    background-color: var(--card-background);
+    color: var(--primary-buttons);
+    padding: 10px;
+    border-radius: 5px;
+    font-family: var(--space-grotesk);
+    border: 1px solid white;
+    box-shadow: 0 0 .2em black;
+    font-size: 12px;
+}
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.content img {
+    width: 200px;
+    padding: 10px;
+}
+.content div {
+    border: 1px solid var(--card-background);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+.content button,
+dialog button {
+    display: block;
+    background-color: var(--card-background);
+    color: var(--primary-buttons);
+    padding: 10px;
+    margin: 5px auto;
+    border-radius: 5px;
+    font-family: var(--space-grotesk);
+    border: 1px solid white;
+    box-shadow: 0 0 .2em black;
+    font-size: 12px;
+    transition: .3s ease;
+    cursor: pointer;
+}
+dialog {
+    background-color: var(--card-background);
+    color: white;
+    border: 1px solid var(--hover-effect);
+    margin: auto;
+    max-width: 90vw;
+    padding: 20px;
+    border-radius: 10px;
+}
+dialog h3 {
+    font-family: var(--monstserrat);
+    font-size: 24px;
+    padding: 5px;
+    margin: 5px;
+}
+dialog p {
+    font-family: var(--inter);
+    margin: 5px;
+    padding: 5px;
+}
+dialog a {
+    color: var(--primary-buttons);
+    /* padding: 5px; */
+    /* text-decoration: underline; */
+    border-bottom: 1px solid var(--primary-buttons);
+    margin: 5px;
+    transition: .3s ease;
+    font-family: var(--space-grotesk);
+}
+dialog a:hover {
+    color: var(--hover-effect);
+    transition: .3s ease;
+}
+dialog a:active {
+    color: var(--background);
+}
+::backdrop {
+    background-image: linear-gradient(45deg, var(--card-background), var(--background));
+    opacity: .9;
+}
+
 @media screen and (max-width: 36rem) {
     #hamburger {
         display: block;
@@ -92,23 +216,37 @@ header>a:hover {
         overflow: hidden;
         transition: .5s ease;
         border-bottom: none;
+        background-color: var(--card-background);
     }
+
     #navigation.open {
         left: 0;
         border-bottom: 1px solid var(--card-background);
         transition: .5s ease;
     }
+
     #navigation ul {
         display: block;
     }
+
     #navigation li {
         width: 99%;
         margin: 3px;
     }
+
     #navigation li a {
         width: 100%;
         text-align: center;
         display: block;
     }
 
+    main p {
+        font-size: small;
+    }
+
+    .connect li:hover,
+    .content button:hover,
+    dialog button:hover {
+        transform: none;
+    }
 }
