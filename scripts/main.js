@@ -5,6 +5,19 @@ hamburger.addEventListener("click", ()=>{
     navigation.classList.toggle("open");
 })
 
+const bodytop = document.getElementById("back-to-top");
+bodytop.addEventListener("click", ()=>{
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+})
+
+const projects = document.querySelector(".projects");
+projects.addEventListener("click", (event)=>{
+    event.preventDefault();
+    document.querySelector(".content").scrollIntoView();
+})
+
+
 // Load data from projects json file
 const url = "./scripts/projects.json";
 const content = document.querySelector(".content");
@@ -13,7 +26,7 @@ async function loadData(url) {
     const data = await fetch(url);
     if(data.ok){
         const result = await data.json();
-        console.log(result);
+        // console.log(result);
         displayData(result);
     }
 }
