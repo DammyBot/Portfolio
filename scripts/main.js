@@ -6,7 +6,13 @@ hamburger.addEventListener("click", ()=>{
 })
 
 const bodytop = document.getElementById("back-to-top");
+const home = document.querySelector(".home");
 bodytop.addEventListener("click", ()=>{
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+})
+home.addEventListener("click", (event)=>{
+    event.preventDefault();
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
 })
@@ -14,7 +20,7 @@ bodytop.addEventListener("click", ()=>{
 const projects = document.querySelector(".projects");
 projects.addEventListener("click", (event)=>{
     event.preventDefault();
-    document.querySelector(".content").scrollIntoView();
+    document.querySelector(".project-content").scrollIntoView();
 })
 
 
