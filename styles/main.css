@@ -126,7 +126,8 @@ main p,
 
 .connect li:hover,
 .content button:hover,
-dialog button:hover {
+dialog button:hover,
+.buttons button:hover {
     transform: scale(1.1);
     transition: .3s ease;
 }
@@ -147,13 +148,19 @@ dialog button:hover {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 .content img {
-    width: 200px;
+    width: 100%;
     padding: 10px;
+}
+.content h3 {
+    font-size: 16px;
+    font-family: var(--monstserrat);
+    padding: 5px;
 }
 .content div {
     border: 1px solid var(--card-background);
+    box-shadow: 0em 0em .15em white;
     border-radius: 10px;
-    margin: 10px;
+    margin: 15px;
     padding: 10px;
 }
 .content button,
@@ -220,6 +227,19 @@ dialog a:active {
     cursor: pointer;
     opacity: .7;
 }
+.buttons button {
+    padding: 10px;
+    margin: 0 5px;
+    box-shadow: 0em 0em .5em black;
+    font-family: var(--inter);
+    background-image: linear-gradient(45deg, var(--hover-effect), var(--primary-buttons));
+    color: white;
+    border-radius: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: .5s ease;
+    font-size: 12px;
+}
 
 @media screen and (max-width: 36rem) {
     #hamburger {
@@ -265,7 +285,8 @@ dialog a:active {
 
     .connect li:hover,
     .content button:hover,
-    dialog button:hover {
+    dialog button:hover,
+    .buttons button:hover {
         transform: none;
     }
 }

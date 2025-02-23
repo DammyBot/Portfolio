@@ -5,22 +5,39 @@ hamburger.addEventListener("click", ()=>{
     navigation.classList.toggle("open");
 })
 
+
+//Event listeners and scrolls
 const bodytop = document.getElementById("back-to-top");
-const home = document.querySelector(".home");
+const home = document.querySelectorAll(".home");
 bodytop.addEventListener("click", ()=>{
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
 })
-home.addEventListener("click", (event)=>{
-    event.preventDefault();
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
+home.forEach(house=>{
+    house.addEventListener("click", (event)=>{
+        event.preventDefault();
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+    })
 })
-
-const projects = document.querySelector(".projects");
-projects.addEventListener("click", (event)=>{
+const projects = document.querySelectorAll(".projects");
+projects.forEach(project=>{
+    project.addEventListener("click", (event)=>{
+        event.preventDefault();
+        document.querySelector(".project-content").scrollIntoView();
+    })
+})
+const contacts = document.querySelectorAll(".contact-me");
+contacts.forEach(contact => {
+    contact.addEventListener("click", (event)=>{
+        event.preventDefault();
+        document.querySelector(".contact").scrollIntoView();
+    })
+})
+const skill = document.querySelector(".skill");
+skill.addEventListener("click", (event)=> {
     event.preventDefault();
-    document.querySelector(".project-content").scrollIntoView();
+    document.querySelector(".skills-content").scrollIntoView();
 })
 
 
@@ -72,3 +89,15 @@ function displayData(datum) {
     });
 }
 loadData(url);
+
+
+//Load data from skills json file
+const skillURL = './scripts/skills.json';
+async function loadSkills(url) {
+    const result = await fetch(url);
+    if (result.ok) {
+        const data = await result.json();
+        console.log(data);
+    }
+}
+loadSkills(skillURL);

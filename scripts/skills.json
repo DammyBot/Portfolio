@@ -1,0 +1,112 @@
+[
+    {
+        "Programming & Development": {
+            "Languages": [
+                "Python",
+                "Java",
+                "C++",
+                "JavaScript",
+                "HTML",
+                "CSS"
+            ],
+            "Frontend Development": [
+                "React.js"
+            ],
+            "Backend Development": [
+                
+            ],
+            "Database Management": [
+                
+            ],
+            "Version Control": [
+                "Git",
+                "GitHub"
+            ]
+        },
+        "Artificial Intelligence & Machine Learning": {
+            "Machine Learning Frameworks": [
+                
+            ],
+            "Deep Learning": [
+                
+            ],
+            "Natural Language Processing": [
+                
+            ],
+            "AI Applications": [
+                
+            ]
+        },
+        "Game Development": {
+            "Game Engine": [
+                "Unreal Engine 4",
+                "Unreal Engine 5"
+            ],
+            "Game Programming": [
+                "C++",
+                "Blueprint Scripting"
+            ],
+            "AI in Games": [
+                "AI controllers",
+                "NPC behaviors"
+            ],
+            "3D Modeling": [
+                "Blender (Basic to Intermediate)"
+            ]
+        },
+        "Ethical Hacking & Cybersecurity": {
+            "Penetration Testing": [
+                
+            ],
+            "Security Tools": [
+                
+            ],
+            "Secure Coding": [
+                
+            ]
+        },
+        "Systems & Software Engineering": {
+            "Operating Systems": [
+                "Windows"
+            ],
+            "Concurrency & Multithreading": [
+                "Java concurrency (beginner)",
+                "Parallel programming"
+            ],
+            "Software Design & Architecture": [
+                "Systems analysis",
+                "UML diagrams"
+            ]
+        },
+        "Social Media Marketing & Dropshipping": {
+            "Marketing Strategies": [
+                
+            ],
+            "E-commerce": [
+                
+            ],
+            "Analytics & Optimization": [
+                
+            ]
+        },
+        "Motion Graphics & Video Editing": {
+            "Software Expertise": [
+                "Adobe After Effects",
+                "Premiere Pro"
+            ],
+            "Motion Graphics": [
+                "Kinetic typography",
+                "Logo animation"
+            ],
+            "Video Editing": [
+                "Color correction",
+                "Transitions",
+                "Visual effects"
+            ]
+        },
+        "Languages": {
+            "English": "Fluent",
+            "French": "Beginner (Currently learning)"
+        }
+    }
+]
