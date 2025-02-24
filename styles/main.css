@@ -220,12 +220,18 @@ dialog a:active {
 }
 #back-to-top{
     position: fixed;
-    bottom: 10px;
+    bottom: 100%;
     right: 10px;
     font-size: 30px;
     transform: rotate(315deg);
     cursor: pointer;
     opacity: .7;
+    transition: .5s ease;
+    filter: opacity(0);
+}
+#back-to-top.show {
+    bottom: 10px;
+    filter: opacity(1);
 }
 .buttons button {
     padding: 10px;
@@ -239,6 +245,37 @@ dialog a:active {
     cursor: pointer;
     transition: .5s ease;
     font-size: 12px;
+}
+.contact {
+    border-radius: 10px;
+    box-shadow: 0em 0em .1em var(--heading-color);
+}
+.contact img {
+    width: 20px;
+    margin: 5px;
+}
+.contact a {
+    display: block;
+    text-align: center;
+    margin: 5px;
+    color: var(--primary-buttons);
+    transition: .2s ease;
+    font-family: var(--manrope);
+}
+.contact a:active {
+    color: var(--background);
+    transition: .2s ease;
+}
+.contact a:hover {
+    color: var(--hover-effect);
+    transition: .2s ease;
+}
+.contact-container div {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
 
 @media screen and (max-width: 36rem) {

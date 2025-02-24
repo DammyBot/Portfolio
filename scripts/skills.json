@@ -1,112 +1,81 @@
 [
     {
-        "Programming & Development": {
-            "Languages": [
+        "programming": {
+            "languages": [
                 "Python",
-                "Java",
                 "C++",
                 "JavaScript",
                 "HTML",
                 "CSS"
             ],
-            "Frontend Development": [
+            "frontend": [
                 "React.js"
             ],
-            "Backend Development": [
+            "backend": [
                 
             ],
-            "Database Management": [
+            "databases": [
                 
             ],
-            "Version Control": [
+            "version_control": [
                 "Git",
                 "GitHub"
             ]
         },
-        "Artificial Intelligence & Machine Learning": {
-            "Machine Learning Frameworks": [
-                
-            ],
-            "Deep Learning": [
-                
-            ],
-            "Natural Language Processing": [
-                
-            ],
-            "AI Applications": [
-                
-            ]
-        },
-        "Game Development": {
-            "Game Engine": [
+        "game_dev": {
+            "engine": [
                 "Unreal Engine 4",
                 "Unreal Engine 5"
             ],
-            "Game Programming": [
+            "programming": [
                 "C++",
                 "Blueprint Scripting"
             ],
-            "AI in Games": [
+            "ai_in_games": [
                 "AI controllers",
                 "NPC behaviors"
             ],
-            "3D Modeling": [
+            "3d_modeling": [
                 "Blender (Basic to Intermediate)"
             ]
         },
-        "Ethical Hacking & Cybersecurity": {
-            "Penetration Testing": [
-                
-            ],
-            "Security Tools": [
-                
-            ],
-            "Secure Coding": [
-                
-            ]
-        },
-        "Systems & Software Engineering": {
-            "Operating Systems": [
+        "systems_software": {
+            "operating_systems": [
                 "Windows"
             ],
-            "Concurrency & Multithreading": [
-                "Java concurrency (beginner)",
+            "concurrency_multithreading": [
+                "Java concurrency",
                 "Parallel programming"
             ],
-            "Software Design & Architecture": [
-                "Systems analysis",
-                "UML diagrams"
+            "software_design": [
+                "Systems analysis"
             ]
         },
-        "Social Media Marketing & Dropshipping": {
-            "Marketing Strategies": [
-                
-            ],
-            "E-commerce": [
-                
-            ],
-            "Analytics & Optimization": [
-                
+        "marketing_dropshipping": {
+            "marketing_strategies": [
+                "SEO",
+                "Content marketing",
+                "Ad campaigns"
             ]
         },
-        "Motion Graphics & Video Editing": {
-            "Software Expertise": [
+        "motion_graphics": {
+            "software": [
                 "Adobe After Effects",
                 "Premiere Pro"
             ],
-            "Motion Graphics": [
+            "motion_graphics": [
                 "Kinetic typography",
                 "Logo animation"
             ],
-            "Video Editing": [
+            "video_editing": [
                 "Color correction",
                 "Transitions",
                 "Visual effects"
             ]
         },
-        "Languages": {
-            "English": "Fluent",
-            "French": "Beginner (Currently learning)"
+        "languages": {
+            "english": "Fluent",
+            "french": "Beginner (Currently learning)"
         }
     }
 ]

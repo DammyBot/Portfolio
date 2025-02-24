@@ -21,10 +21,11 @@ home.forEach(house=>{
     })
 })
 const projects = document.querySelectorAll(".projects");
+const projectcontent = document.querySelector(".project-content");
 projects.forEach(project=>{
     project.addEventListener("click", (event)=>{
         event.preventDefault();
-        document.querySelector(".project-content").scrollIntoView();
+        projectcontent.scrollIntoView();
     })
 })
 const contacts = document.querySelectorAll(".contact-me");
@@ -39,6 +40,21 @@ skill.addEventListener("click", (event)=> {
     event.preventDefault();
     document.querySelector(".skills-content").scrollIntoView();
 })
+
+
+//Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            bodytop.classList.add("show");
+        }else{
+            bodytop.classList.remove("show");
+        }
+    })
+}, {
+    threshold: .5,
+})
+observer.observe(projectcontent);
 
 
 // Load data from projects json file
@@ -82,8 +98,10 @@ function displayData(datum) {
             const name1 = name.cloneNode(true);
             modal.append(name1, description, link, close);
             modal.showModal();
+            document.body.style.overflow = "hidden";
             close.addEventListener("click", ()=>{
                 modal.close();
+                document.body.style.overflow = "auto";
             })
         })
     });
@@ -92,12 +110,22 @@ loadData(url);
 
 
 //Load data from skills json file
+const skillbody = document.querySelector(".skills-body");
 const skillURL = './scripts/skills.json';
 async function loadSkills(url) {
     const result = await fetch(url);
     if (result.ok) {
         const data = await result.json();
-        console.log(data);
+        displaySkills(data);
     }
 }
+
+function displaySkills(data) {
+    data.forEach(datum => {
+        //Programming
+        console.log(datum);
+        // console.log(datum.programming);
+    }) 
+}
+
 loadSkills(skillURL);
