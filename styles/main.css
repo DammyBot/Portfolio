@@ -33,6 +33,15 @@ body {
     background-color: var(--background);
 }
 
+main {
+    filter: blur(0px);
+    transition: .2s ease;
+}
+main.open {
+    filter: blur(2px);
+    transition: .2s ease;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -43,6 +52,7 @@ header {
     top: 0;
     left: 0;
     background-color: var(--background);
+    z-index: 999;
 }
 
 header>a {
@@ -341,18 +351,19 @@ dialog a:active {
 
     #navigation {
         position: absolute;
-        top: 100%;
-        left: -100%;
+        top: -1000%;
+        left: 0;
         width: 100%;
         z-index: 1000;
         overflow: hidden;
         transition: .5s ease;
         border-bottom: none;
         background-color: var(--card-background);
+        z-index: -1;
     }
 
     #navigation.open {
-        left: 0;
+        top: 100%;
         border-bottom: 1px solid var(--card-background);
         transition: .5s ease;
     }
