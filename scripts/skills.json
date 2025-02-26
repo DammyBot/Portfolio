@@ -3,10 +3,10 @@
         "programming": {
             "languages": [
                 "Python",
-                "C++",
-                "JavaScript",
-                "HTML",
-                "CSS"
+                " C++",
+                " JavaScript",
+                " HTML",
+                " CSS"
             ],
             "frontend": [
                 "React.js"
@@ -18,25 +18,25 @@
                 
             ],
             "version_control": [
-                "Git",
-                "GitHub"
+                " Git",
+                " GitHub"
             ]
         },
         "game_dev": {
             "engine": [
                 "Unreal Engine 4",
-                "Unreal Engine 5"
+                " Unreal Engine 5"
             ],
             "programming": [
-                "C++",
-                "Blueprint Scripting"
+                " C++",
+                " Blueprint Scripting"
             ],
             "ai_in_games": [
-                "AI controllers",
-                "NPC behaviors"
+                " AI controllers",
+                " NPC behaviors"
             ],
-            "3d_modeling": [
-                "Blender (Basic to Intermediate)"
+            "modeling": [
+                " Blender (Basic to Intermediate)"
             ]
         },
         "systems_software": {
@@ -44,11 +44,11 @@
                 "Windows"
             ],
             "concurrency_multithreading": [
-                "Java concurrency",
-                "Parallel programming"
+                " Java concurrency",
+                " Parallel programming"
             ],
             "software_design": [
-                "Systems analysis"
+                " Systems analysis"
             ]
         },
         "marketing_dropshipping": {
@@ -61,16 +61,16 @@
         "motion_graphics": {
             "software": [
                 "Adobe After Effects",
-                "Premiere Pro"
+                " Premiere Pro"
             ],
             "motion_graphics": [
-                "Kinetic typography",
-                "Logo animation"
+                " Kinetic typography",
+                " Logo animation"
             ],
             "video_editing": [
-                "Color correction",
-                "Transitions",
-                "Visual effects"
+                " Color correction",
+                " Transitions",
+                " Visual effects"
             ]
         },
         "languages": {

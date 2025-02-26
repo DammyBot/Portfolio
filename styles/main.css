@@ -18,7 +18,9 @@
 html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
+    box-sizing: border-box;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -100,9 +102,11 @@ main h2 {
     padding: 10px;
     font-size: 24px;
 }
+
 main h2 {
     font-size: 20px;
 }
+
 main p,
 .content p {
     font-family: var(--inter);
@@ -143,26 +147,32 @@ dialog button:hover,
     box-shadow: 0 0 .2em black;
     font-size: 12px;
 }
+
 .content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+
 .content img {
-    width: 100%;
+    width: 200px;
     padding: 10px;
 }
+
 .content h3 {
     font-size: 16px;
     font-family: var(--monstserrat);
     padding: 5px;
 }
+
 .content div {
     border: 1px solid var(--card-background);
     box-shadow: 0em 0em .15em white;
     border-radius: 10px;
     margin: 15px;
     padding: 10px;
+    /* width: 100%; */
 }
+
 .content button,
 dialog button {
     display: block;
@@ -178,6 +188,7 @@ dialog button {
     transition: .3s ease;
     cursor: pointer;
 }
+
 dialog {
     background-color: var(--card-background);
     color: white;
@@ -187,17 +198,20 @@ dialog {
     padding: 20px;
     border-radius: 10px;
 }
+
 dialog h3 {
     font-family: var(--monstserrat);
     font-size: 24px;
     padding: 5px;
     margin: 5px;
 }
+
 dialog p {
     font-family: var(--inter);
     margin: 5px;
     padding: 5px;
 }
+
 dialog a {
     color: var(--primary-buttons);
     /* padding: 5px; */
@@ -207,18 +221,22 @@ dialog a {
     transition: .3s ease;
     font-family: var(--space-grotesk);
 }
+
 dialog a:hover {
     color: var(--hover-effect);
     transition: .3s ease;
 }
+
 dialog a:active {
     color: var(--background);
 }
+
 ::backdrop {
     background-image: linear-gradient(45deg, var(--card-background), var(--background));
     opacity: .9;
 }
-#back-to-top{
+
+#back-to-top {
     position: fixed;
     bottom: 100%;
     right: 10px;
@@ -229,10 +247,12 @@ dialog a:active {
     transition: .5s ease;
     filter: opacity(0);
 }
+
 #back-to-top.show {
     bottom: 10px;
     filter: opacity(1);
 }
+
 .buttons button {
     padding: 10px;
     margin: 0 5px;
@@ -246,14 +266,17 @@ dialog a:active {
     transition: .5s ease;
     font-size: 12px;
 }
+
 .contact {
     border-radius: 10px;
     box-shadow: 0em 0em .1em var(--heading-color);
 }
+
 .contact img {
-    width: 20px;
-    margin: 5px;
+    width: 15px;
+    /* margin-right: 1px; */
 }
+
 .contact a {
     display: block;
     text-align: center;
@@ -261,21 +284,54 @@ dialog a:active {
     color: var(--primary-buttons);
     transition: .2s ease;
     font-family: var(--manrope);
+    font-size: 14px;
 }
+
 .contact a:active {
     color: var(--background);
     transition: .2s ease;
 }
+
 .contact a:hover {
     color: var(--hover-effect);
     transition: .2s ease;
 }
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .contact-container div {
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
+}
+
+.skills-content {
+    padding: 10px;
+}
+
+.skills-body {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.skills-body div {
+    padding: 10px;
+    border: 1px solid var(--card-background);
+    box-shadow: 0em 0em .2em var(--heading-color);
+    border-radius: 10px;
+    margin: 4px 5px 10px;
+    /* width: 100%; */
 }
 
 @media screen and (max-width: 36rem) {
@@ -325,5 +381,9 @@ dialog a:active {
     dialog button:hover,
     .buttons button:hover {
         transform: none;
+    }
+
+    .contact-container {
+        display: grid;
     }
 }

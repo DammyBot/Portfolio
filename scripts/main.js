@@ -29,10 +29,11 @@ projects.forEach(project=>{
     })
 })
 const contacts = document.querySelectorAll(".contact-me");
+const contact_details = document.querySelector(".contact");
 contacts.forEach(contact => {
     contact.addEventListener("click", (event)=>{
         event.preventDefault();
-        document.querySelector(".contact").scrollIntoView();
+        contact_details.scrollIntoView();
     })
 })
 const skill = document.querySelector(".skill");
@@ -54,8 +55,13 @@ const observer = new IntersectionObserver((entries) => {
 }, {
     threshold: .5,
 })
-observer.observe(projectcontent);
+observer.observe(contact_details);
 
+
+// Toggle activation based on categories;
+const web = document.getElementById("web");
+const video = document.getElementById("video");
+const game = document.getElementById("game");
 
 // Load data from projects json file
 const url = "./scripts/projects.json";
@@ -65,12 +71,12 @@ async function loadData(url) {
     const data = await fetch(url);
     if(data.ok){
         const result = await data.json();
-        // console.log(result);
         displayData(result);
+        // web.addEventListener("click", dataDisplay(data, "Website"));
     }
 }
-function displayData(datum) {
-    datum.forEach(datum => {
+function displayData(data) {
+    data.forEach(datum => {
         const div = document.createElement("div");
         const name = document.createElement("h3");
         const img = document.createElement("img");
@@ -86,7 +92,7 @@ function displayData(datum) {
         img.loading = "lazy";
         button.textContent = "Check Details";
         close.textContent = "Close";
-        link.textContent = `Website to ${datum.name}`;
+        link.textContent = `Link to ${datum.name}`;
         link.href = datum.link;
         link.target = "_blank";
 
@@ -99,12 +105,24 @@ function displayData(datum) {
             modal.append(name1, description, link, close);
             modal.showModal();
             document.body.style.overflow = "hidden";
+            // document.onkeydown("escape" , ()=>{
+            //     document.body.style.overflow = "auto";
+            // })
             close.addEventListener("click", ()=>{
                 modal.close();
                 document.body.style.overflow = "auto";
             })
         })
     });
+}
+function displayBasedonCategory(data, category){
+    content.innerHTML = "";
+    data.forEach(datum=>{
+        if(datum[category] === "Website"){
+        displayData(data);
+        console.log("Website");
+        }
+    })
 }
 loadData(url);
 
@@ -122,10 +140,38 @@ async function loadSkills(url) {
 
 function displaySkills(data) {
     data.forEach(datum => {
-        //Programming
-        console.log(datum);
-        // console.log(datum.programming);
+        showData(datum, "programming");
+        showData(datum, "game_dev");
+        showData(datum, "systems_software");
+        showData(datum, "motion_graphics");
     }) 
+}
+
+function showData(data, data_item) {
+    const div = document.createElement("div");
+    const title = document.createElement("h3");
+    const details = document.createElement("p");
+
+    if(data_item === "programming") {
+        title.textContent = "Programming";
+        details.textContent = `${data[data_item].languages}, ${data[data_item].frontend}, ${data[data_item].version_control}`;
+
+    }else if (data_item === "game_dev"){
+        title.textContent = "Game Development";
+        details.textContent = `${data[data_item].engine}, ${data[data_item].programming}, ${data[data_item].ai_in_games}, ${data[data_item].modeling}`
+
+    }else if (data_item === "systems_software"){
+        title.textContent = "Systems software";
+        details.textContent = `${data[data_item].operating_systems}, ${data[data_item].concurrency_multithreading}, ${data[data_item].software_design}`;
+
+    }else if (data_item === "motion_graphics"){
+        title.textContent = "Motion Graphics"
+        details.textContent = `${data[data_item].software}, ${data[data_item].motion_graphics}, ${data[data_item].video_editing}`;
+        
+    }
+
+    div.append(title,details);
+    skillbody.append(div);
 }
 
 loadSkills(skillURL);

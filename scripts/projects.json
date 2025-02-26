@@ -12,5 +12,19 @@
         "description": "For my final project in the WDD230 Frontend Development course at Brigham Young University-Idaho, I had the privilege of applying the knowledge and skills I acquired throughout the course to build this website. This project allowed me to demonstrate my understanding of fundamental web development principles, including the creation of dynamic and interactive web content. Throughout the course, I gained valuable experience working with HTML, CSS, and JavaScript to build responsive, user-friendly interfaces. I learned how to use JavaScript to add interactivity, enabling websites to respond to user actions and deliver a more engaging experience. This project serves as a testament to my growth and dedication to mastering frontend development, as well as my ability to implement industry best practices to create functional and visually appealing web applications.",
         "image": "./images/bountiful-foods.png",
         "link": "https://dammybot.github.io/wdd230/project/project/index.html"
+    },
+    {
+        "name": "Muhichiro AMV",
+        "category": "Video",
+        "description": "A short anime edit I made when I got bored, more like a collaboration video I made with a friend",
+        "image": "./images/collab_TBK.gif",
+        "link": "https://www.instagram.com/p/C7mDRXAtrVr/"
+    },
+    {
+        "name": "Horimiya AMV",
+        "category": "Video",
+        "description": "A short anime edit I made when I got bored, more like a collaboration video I made with a friend",
+        "image": "./images/horimiya.gif",
+        "link": "https://www.instagram.com/p/CrXyPzBANVD/"
     }
 ]
