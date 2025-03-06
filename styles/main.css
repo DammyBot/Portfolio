@@ -7,11 +7,11 @@
     --card-background: #1E1E1E;
     --heading-color: #FFFFFF;
     /* Fonts */
-    --monstserrat: "Montserrat", serif;
-    --poppins: "Poppins", serif;
-    --inter: "Inter", serif;
-    --space-grotesk: "Space Grotesk", serif;
-    --manrope: "Manrope", serif;
+    --oswald: "Oswald", sans-serif;
+    --rubik: "Rubik", sans-serif;
+    --chivo: "Chivo", sans-serif;
+    --comfortaa: "Comfortaa", sans-serif;
+    --nunito: "Nunito", sans-serif;
     /* Others */
 }
 
@@ -37,6 +37,7 @@ main {
     filter: blur(0px);
     transition: .2s ease;
 }
+
 main.open {
     filter: blur(2px);
     transition: .2s ease;
@@ -57,7 +58,7 @@ header {
 
 header>a {
     color: var(--heading-color);
-    font-family: var(--monstserrat);
+    font-family: var(--chivo);
     font-size: 1.5em;
     transition: .3s ease;
     font-size: 24px;
@@ -76,8 +77,8 @@ header>a:hover {
 
 #navigation li a {
     color: var(--text);
-    font-family: var(--inter);
-    font-size: small;
+    font-family: var(--chivo);
+    font-size: 16px;
     padding: 10px;
     margin: 3px;
     transition: .3s ease;
@@ -97,6 +98,11 @@ header>a:hover {
     cursor: pointer;
     display: none;
     color: white;
+    transition: .3s ease;
+}
+#hamburger:hover {
+    color: var(--hover-effect);
+    transition: .3s ease;
 }
 
 main {
@@ -108,7 +114,7 @@ main {
 
 main h1,
 main h2 {
-    font-family: var(--monstserrat);
+    font-family: var(--oswald);
     padding: 10px;
     font-size: 24px;
 }
@@ -119,8 +125,9 @@ main h2 {
 
 main p,
 .content p {
-    font-family: var(--inter);
-    font-size: 14px;
+    font-family: var(--nunito);
+    font-size: 18px;
+    font-weight: lighter;
     padding: 5px;
 }
 
@@ -152,7 +159,7 @@ dialog button:hover,
     color: var(--primary-buttons);
     padding: 10px;
     border-radius: 5px;
-    font-family: var(--space-grotesk);
+    font-family: var(--comfortaa);
     border: 1px solid white;
     box-shadow: 0 0 .2em black;
     font-size: 12px;
@@ -170,7 +177,7 @@ dialog button:hover,
 
 .content h3 {
     font-size: 16px;
-    font-family: var(--monstserrat);
+    font-family: var(--oswald);
     padding: 5px;
 }
 
@@ -180,6 +187,11 @@ dialog button:hover,
     border-radius: 10px;
     margin: 15px;
     padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     /* width: 100%; */
 }
 
@@ -191,7 +203,7 @@ dialog button {
     padding: 10px;
     margin: 5px auto;
     border-radius: 5px;
-    font-family: var(--space-grotesk);
+    font-family: var(--comfortaa);
     border: 1px solid white;
     box-shadow: 0 0 .2em black;
     font-size: 12px;
@@ -210,7 +222,7 @@ dialog {
 }
 
 dialog h3 {
-    font-family: var(--monstserrat);
+    font-family: var(--oswald);
     font-size: 24px;
     padding: 5px;
     margin: 5px;
@@ -229,7 +241,7 @@ dialog a {
     border-bottom: 1px solid var(--primary-buttons);
     margin: 5px;
     transition: .3s ease;
-    font-family: var(--space-grotesk);
+    font-family: var(--comfortaa);
 }
 
 dialog a:hover {
@@ -246,6 +258,7 @@ dialog a:active {
     opacity: .9;
 }
 
+/* The button doesn't stay fixed in place, fix this on your next visit */
 #back-to-top {
     position: fixed;
     bottom: 100%;
@@ -256,6 +269,7 @@ dialog a:active {
     opacity: .7;
     transition: .5s ease;
     filter: opacity(0);
+    z-index: 999;
 }
 
 #back-to-top.show {
@@ -293,7 +307,7 @@ dialog a:active {
     margin: 5px;
     color: var(--primary-buttons);
     transition: .2s ease;
-    font-family: var(--manrope);
+    font-family: var(--nunito);
     font-size: 14px;
 }
 
@@ -341,7 +355,15 @@ dialog a:active {
     box-shadow: 0em 0em .2em var(--heading-color);
     border-radius: 10px;
     margin: 4px 5px 10px;
-    /* width: 100%; */
+    /* width: 90%; */
+    transition: .3s ease;
+    cursor: default;
+}
+
+.skills-body div:hover {
+    transform: scale(1.1);
+    box-shadow: 0em 0em .5em var(--hover-effect);
+    transition: .3s ease;
 }
 
 @media screen and (max-width: 36rem) {
@@ -384,17 +406,15 @@ dialog a:active {
     }
 
     main p {
-        font-size: small;
-    }
-
-    .connect li:hover,
-    .content button:hover,
-    dialog button:hover,
-    .buttons button:hover {
-        transform: none;
+        font-size: 16px;
+        font-weight: lighter;
     }
 
     .contact-container {
         display: grid;
+    }
+
+    .skills-body div {
+        width: 100%;
     }
 }

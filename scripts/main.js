@@ -27,6 +27,7 @@ projects.forEach(project=>{
     project.addEventListener("click", (event)=>{
         event.preventDefault();
         projectcontent.scrollIntoView();
+        // navigation.classList.toggle("open");
     })
 })
 const contacts = document.querySelectorAll(".contact-me");
