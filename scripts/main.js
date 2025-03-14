@@ -6,6 +6,60 @@ hamburger.addEventListener("click", ()=>{
     document.querySelector("main").classList.toggle("open");
 })
 
+//Changing active link based on observer
+const home1 = document.getElementById("home");
+const projects1 = document.getElementById("projects");
+const skill1 = document.getElementById("skill");
+const contact1 = document.getElementById("contact-me")
+
+const activeObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            home1.classList.add("active");
+        }else {
+            home1.classList.remove("active");
+        }
+    })
+}, {
+    threshold: .5
+})
+const activeObserver1 = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            projects1.classList.add("active");
+        }else {
+            projects1.classList.remove("active");
+        }
+    })
+},{
+    threshold: .5
+})
+const activeObserver2 = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            skill1.classList.add("active");
+        }else {
+            skill1.classList.remove("active");
+        }
+    })
+},{
+    threshold: .5
+})
+const activeObserver3 = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            contact1.classList.add("active");
+        }else {
+            contact1.classList.remove("active");
+        }
+    })
+},{
+    threshold: .5
+})
+activeObserver.observe(document.querySelector(".information"));
+activeObserver1.observe(document.querySelector(".project-content"));
+activeObserver2.observe(document.querySelector(".skills-content"));
+activeObserver3.observe(document.querySelector(".contact-container"));
 
 //Event listeners and scrolls
 const bodytop = document.getElementById("back-to-top");
@@ -19,6 +73,8 @@ home.forEach(house=>{
         event.preventDefault();
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
+        navigation.classList.remove("open");
+        document.querySelector("main").classList.remove("open");
     })
 })
 const projects = document.querySelectorAll(".projects");
@@ -27,7 +83,8 @@ projects.forEach(project=>{
     project.addEventListener("click", (event)=>{
         event.preventDefault();
         projectcontent.scrollIntoView();
-        // navigation.classList.toggle("open");
+        navigation.classList.remove("open");
+        document.querySelector("main").classList.remove("open");
     })
 })
 const contacts = document.querySelectorAll(".contact-me");
@@ -36,12 +93,16 @@ contacts.forEach(contact => {
     contact.addEventListener("click", (event)=>{
         event.preventDefault();
         contact_details.scrollIntoView();
+        navigation.classList.remove("open");
+        document.querySelector("main").classList.remove("open");
     })
 })
 const skill = document.querySelector(".skill");
 skill.addEventListener("click", (event)=> {
     event.preventDefault();
     document.querySelector(".skills-content").scrollIntoView();
+    navigation.classList.remove("open");
+    document.querySelector("main").classList.remove("open");
 })
 
 
@@ -74,7 +135,6 @@ async function loadData(url) {
     if(data.ok){
         const result = await data.json();
         displayData(result);
-        // web.addEventListener("click", dataDisplay(data, "Website"));
     }
 }
 function displayData(data) {
@@ -115,17 +175,15 @@ function displayData(data) {
                 document.body.style.overflow = "auto";
             })
         })
+
+        
     });
 }
-function displayBasedonCategory(data, category){
-    content.innerHTML = "";
-    data.forEach(datum=>{
-        if(datum[category] === "Website"){
-        displayData(data);
-        console.log("Website");
-        }
-    })
+
+function displayInfo(data){
+    
 }
+
 loadData(url);
 
 
