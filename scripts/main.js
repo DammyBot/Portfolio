@@ -122,9 +122,11 @@ observer.observe(contact_details);
 
 
 // Toggle activation based on categories;
+const all = document.getElementById("all");
 const web = document.getElementById("web");
 const video = document.getElementById("video");
 const game = document.getElementById("game");
+let result = [];
 
 // Load data from projects json file
 const url = "./scripts/projects.json";
@@ -133,7 +135,8 @@ const modal = document.querySelector("dialog");
 async function loadData(url) {
     const data = await fetch(url);
     if(data.ok){
-        const result = await data.json();
+        result = await data.json();
+        console.log(result);
         displayData(result);
     }
 }
@@ -175,13 +178,75 @@ function displayData(data) {
                 document.body.style.overflow = "auto";
             })
         })
-
-        
     });
 }
 
-function displayInfo(data){
-    
+web.addEventListener("click", ()=>{
+    content.innerHTML = "";
+    result.forEach(item=>{
+        if(item.category == "Website"){
+            displayInfo(item);
+        }
+    })
+})
+all.addEventListener("click", ()=>{
+    content.innerHTML = "";
+    displayData(result);
+})
+video.addEventListener("click", ()=>{
+    content.innerHTML = "";
+    result.forEach(item=>{
+        if(item.category == "Video"){
+            displayInfo(item);
+        }
+    })
+})
+game.addEventListener("click", ()=>{
+    content.innerHTML = "";
+    result.forEach(item=>{
+        if(item.category == "Game"){
+            displayInfo(item);
+        }
+    })
+})
+
+function displayInfo(datum){
+    const div = document.createElement("div");
+    const name = document.createElement("h3");
+    const img = document.createElement("img");
+    const description = document.createElement("p");
+    const button = document.createElement("button");
+    const close = document.createElement("button");
+    const link = document.createElement("a");
+
+    name.textContent = datum.name;
+    description.textContent = datum.description;
+    img.src = datum.image;
+    img.alt = `Image of ${datum.name}`;
+    img.loading = "lazy";
+    button.textContent = "Check Details";
+    close.textContent = "Close";
+    link.textContent = `Link to ${datum.name}`;
+    link.href = datum.link;
+    link.target = "_blank";
+
+    div.append(name, img, button);
+    content.appendChild(div);
+
+    button.addEventListener("click", ()=>{
+        modal.innerHTML = "";
+        const name1 = name.cloneNode(true);
+        modal.append(name1, description, link, close);
+        modal.showModal();
+        document.body.style.overflow = "hidden";
+        // document.onkeydown("escape" , ()=>{
+        //     document.body.style.overflow = "auto";
+        // })
+        close.addEventListener("click", ()=>{
+            modal.close();
+            document.body.style.overflow = "auto";
+        })
+    })
 }
 
 loadData(url);
@@ -222,7 +287,7 @@ function showData(data, data_item) {
 
     }else if (data_item === "systems_software"){
         title.textContent = "Systems software";
-        details.textContent = `${data[data_item].operating_systems}, ${data[data_item].concurrency_multithreading}, ${data[data_item].software_design}`;
+        details.textContent = `${data[data_item].operating_systems}, ${data[data_item].software_design}`;
 
     }else if (data_item === "motion_graphics"){
         title.textContent = "Motion Graphics"
