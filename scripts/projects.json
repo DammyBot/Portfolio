@@ -14,6 +14,13 @@
         "link": "https://dammybot.github.io/wdd230/project/project/index.html"
     },
     {
+        "name": "Task Manager",
+        "category": "Website",
+        "description": "This Task Manager is a simple web-based application that allows users to add, complete, and delete tasks while ensuring data persistence using localStorage. Users can enter a task into an input field, add it to the list, and mark it as completed using a checkbox, which moves it to a separate completed section. Tasks remain stored even after refreshing the page, as every addition, completion, or deletion dynamically updates localStorage. Built using HTML, CSS (optional for styling), and JavaScript, this project demonstrates event handling and data persistence techniques.",
+        "image": "./images/to-do-list.png",
+        "link": "https://dammybot.github.io/web-projects/todo/index.html"
+    },
+    {
         "name": "Muhichiro AMV",
         "category": "Video",
         "description": "A short anime edit I made when I got bored, more like a collaboration video I made with a friend",
@@ -23,8 +30,29 @@
     {
         "name": "Horimiya AMV",
         "category": "Video",
-        "description": "A short anime edit I made when I got bored, more like a collaboration video I made with a friend",
+        "description": "A short anime edit I made during valentines",
         "image": "./images/horimiya.gif",
         "link": "https://www.instagram.com/p/CrXyPzBANVD/"
+    },
+    {
+        "name": "Zoro AMV",
+        "category": "Video",
+        "description": "A short anime edit I made practicing how flows work in video editing",
+        "image": "./images/zoro.gif",
+        "link": "https://www.instagram.com/p/CqGUE2ngaAM/"
+    },
+    {
+        "name": "CODM edit",
+        "category": "Video",
+        "description": "Short commision CODM montage for a youtuber",
+        "image": "./images/codm.gif",
+        "link": "https://www.instagram.com/p/DHEkgQ4snVL/"
+    },
+    {
+        "name": "3d Donut render",
+        "category": "Game",
+        "description": "Short 3d render of a donut following Blender Guru tutorial",
+        "image": "./images/donut.gif",
+        "link": "https://www.instagram.com/p/CxrBZG_svPN/"
     }
 ]
