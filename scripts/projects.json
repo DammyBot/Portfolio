@@ -54,5 +54,12 @@
         "description": "Short 3d render of a donut following Blender Guru tutorial",
         "image": "./images/donut.gif",
         "link": "https://www.instagram.com/p/CxrBZG_svPN/"
+    },
+    {
+        "name": "Flappy Bird Remake",
+        "category": "Game",
+        "description": "Made a small Flappy Bird remake in UE4! Learned blueprints, keybinds, blueprint casting, sound design, and collision systems. Honestly, such a fun project if I do say so myself!",
+        "image": "./images/flappy-bird.gif",
+        "link": "https://www.instagram.com/p/DHRFwpKMKCM/"
     }
 ]
