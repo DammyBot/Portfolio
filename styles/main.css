@@ -12,7 +12,17 @@
     --chivo: "Chivo", sans-serif;
     --comfortaa: "Comfortaa", sans-serif;
     --nunito: "Nunito", sans-serif;
-    /* Others */
+    /* Font Sizes */
+    --h1-big: 54px;
+    --h1-small: ;
+    --h2-big: 36px;
+    --h2-small: ;
+    --h3-big: 24px;
+    --h3-small: ;
+    --p-big: 20px;
+    --p-small: ;
+    --a-big: 16px;
+    --a-small: ;
 }
 
 html {
@@ -33,26 +43,6 @@ html {
 body {
     background-color: var(--background);
     font-size: 16px;
-}
-
-h1 {
-    font-size: 42px;
-}
-
-h2 {
-    font-size: 32px;
-}
-
-h3 {
-    font-size: 20px;
-}
-
-p {
-    font-size: 18px;
-}
-a,
-button {
-    font-size: 14px;
 }
 
 main {
@@ -101,7 +91,7 @@ header>a:hover {
 #navigation li a {
     color: var(--text);
     font-family: var(--chivo);
-    /* font-size: 16px; */
+    font-size: 16px;
     padding: 10px;
     margin: 3px;
     transition: .3s ease;
@@ -132,25 +122,33 @@ header>a:hover {
 main {
     text-align: center;
     color: white;
-    /* max-width: 80vw; */
+    max-width: 90vw;
     margin: auto;
 }
 
-main h1,
-main h2 {
+footer {
+    text-align: center;
+    color: white;
+    margin: auto;
+}
+
+main h1 {
+    font-family: var(--oswald);
+    padding: 10px;
+    font-size: var(--h1-big);
+}
+
+main h2,
+footer h2 {
     font-family: var(--oswald);
     padding: 10px;
     /* font-size: 24px; */
 }
 
-/* main h2 {
-    font-size: 20px;
-} */
-
 main p,
 .content p {
     font-family: var(--nunito);
-    /* font-size: 18px; */
+    font-size: var(--p-big);
     font-weight: lighter;
     padding: 5px;
 }
@@ -186,12 +184,12 @@ dialog button:hover,
     font-family: var(--comfortaa);
     border: 1px solid white;
     box-shadow: 0 0 .2em black;
-    /* font-size: 12px; */
+    font-size: var(--a-big);
 }
 
 .content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
 .content img {
@@ -200,7 +198,7 @@ dialog button:hover,
 }
 
 .content h3 {
-    /* font-size: 16px; */
+    font-size: 22px;
     font-family: var(--oswald);
     padding: 5px;
 }
@@ -243,6 +241,13 @@ dialog {
     max-width: 90vw;
     padding: 20px;
     border-radius: 10px;
+    /* position: inherit; */
+}
+
+dialog button {
+    position: absolute;
+    right: 20px;
+    top: 10px;
 }
 
 dialog h3 {
@@ -314,18 +319,17 @@ dialog a:active {
     border: 1px solid white;
     cursor: pointer;
     transition: .5s ease;
-    /* font-size: 12px; */
+    font-size: var(--a-big);
 }
 
 .contact {
     border-radius: 10px;
     box-shadow: 0em 0em .1em var(--heading-color);
-    margin: 10px;
+    padding: 10px;
 }
 
 .contact img {
-    width: 15px;
-    /* margin-right: 1px; */
+    width: 20px;
 }
 
 .contact a {
@@ -335,7 +339,7 @@ dialog a:active {
     color: var(--primary-buttons);
     transition: .2s ease;
     font-family: var(--nunito);
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .contact a:active {
@@ -365,16 +369,11 @@ dialog a:active {
 
 .skills-content {
     padding: 10px;
-    /* border: 1px solid white; */
 }
 
 .skills-body {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    /* flex-wrap: wrap; */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
 }
 
 .skills-body div {
@@ -388,18 +387,20 @@ dialog a:active {
     cursor: default;
 }
 
-/* .skills-body div:hover {
-    transform: scale(1.1);
-    box-shadow: 0em 0em .5em var(--hover-effect);
-    transition: .3s ease;
-} */
+.skills-body div h3 {
+    font-size: 24px;
+}
 
-@media screen and (max-width: 36rem) {
+.skills-body div p {
+    font-size: 18px;
+}
+
+@media screen and (max-width: 38rem) {
     body {
         font-size: 16px;
     }
 
-    h1 {
+    main h1 {
         font-size: 32px;
     }
 
@@ -453,6 +454,7 @@ dialog a:active {
         width: 100%;
         text-align: center;
         display: block;
+        font-size: 16px;
     }
 
     main p {
@@ -465,10 +467,45 @@ dialog a:active {
         grid-template-columns: 1fr;
     }
 
-    /* .skills-body div {} */
+    main {
+        width: 100%;
+    }
 
     main.open {
         filter: blur(2px);
         transition: .2s ease;
+    }
+
+    main p,
+    .content p {
+        font-size: 16px;
+    }
+
+    .connect li a {
+        font-size: 16px;
+    }
+
+    .buttons button {
+        font-size: 16px;
+    }
+
+    .content h3 {
+        font-size: 18px;
+    }
+
+    .skills-body {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-body div h3 {
+        font-size: 20px;
+    }
+
+    .skills-body div p {
+        font-size: 16px;
+    }
+
+    .contact a {
+        font-size: 18px;
     }
 }

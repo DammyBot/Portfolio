@@ -156,7 +156,7 @@ function displayData(data) {
         img.alt = `Image of ${datum.name}`;
         img.loading = "lazy";
         button.textContent = "Check Details";
-        close.textContent = "Close";
+        close.textContent = "❌";
         link.textContent = `Link to ${datum.name}`;
         link.href = datum.link;
         link.target = "_blank";
