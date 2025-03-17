@@ -395,6 +395,36 @@ dialog a:active {
     font-size: 18px;
 }
 
+.txt,
+.btn {
+    transform: translateY(-10%);
+    filter: blur(.3px);
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+.txt.show,
+.btn.show {
+    transform: translateY(0%);
+    filter: blur(0px);
+    opacity: 1;
+    transition: 1s ease-in-out;
+}
+
+.btn1 {
+    transform: translateX(-10%);
+    filter: blur(.3px);
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+.btn1.show {
+    transform: translateX(0%);
+    filter: blur(0px);
+    opacity: 1;
+    transition: 1s ease-in-out;
+}
+
 @media screen and (max-width: 38rem) {
     body {
         font-size: 16px;

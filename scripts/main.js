@@ -120,6 +120,30 @@ const observer = new IntersectionObserver((entries) => {
 })
 observer.observe(contact_details);
 
+const texts = document.querySelectorAll(".txt");
+const btn = document.querySelectorAll(".btn");
+const btn1 = document.querySelectorAll(".btn1");
+const textAnim = new IntersectionObserver((entries)=>{
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+        else{
+            entry.target.classList.remove("show");
+        }
+    })
+}, {
+    threshold: .5
+})
+texts.forEach(text=>{
+    textAnim.observe(text);
+})
+btn.forEach(bt=>{
+    textAnim.observe(bt);
+})
+btn1.forEach(bt=>{
+    textAnim.observe(bt);
+})
 
 // Toggle activation based on categories;
 const all = document.getElementById("all");
@@ -136,7 +160,6 @@ async function loadData(url) {
     const data = await fetch(url);
     if(data.ok){
         result = await data.json();
-        console.log(result);
         displayData(result);
     }
 }
