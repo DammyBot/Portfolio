@@ -122,7 +122,7 @@ header>a:hover {
 main {
     text-align: center;
     color: white;
-    max-width: 90vw;
+    width: 90vw;
     margin: auto;
 }
 
@@ -396,31 +396,64 @@ dialog a:active {
 }
 
 .txt,
-.btn {
-    transform: translateY(-10%);
-    filter: blur(.3px);
+.btn,
+.div {
+    transform: translateY(-5%);
     opacity: 0;
     transition: 1s ease-in-out;
 }
 
+.bth:nth-of-type(2).show {
+    transition-duration: 200ms;
+}
+
 .txt.show,
-.btn.show {
+.btn.show,
+.div.show {
     transform: translateY(0%);
-    filter: blur(0px);
     opacity: 1;
     transition: 1s ease-in-out;
 }
 
 .btn1 {
-    transform: translateX(-10%);
-    filter: blur(.3px);
+    transform: translateX(-5%);
     opacity: 0;
     transition: 1s ease-in-out;
 }
 
+.btn1:nth-of-type(2).show {
+    transition-delay: 50ms;
+}
+
+.btn1:nth-of-type(3).show {
+    transition-delay: 100ms;
+}
+
+.btn1:nth-of-type(4).show {
+    transition-delay: 150ms;
+}
+
 .btn1.show {
     transform: translateX(0%);
-    filter: blur(0px);
+    opacity: 1;
+    transition: 1s ease-in-out;
+}
+
+.pj {
+    transform: translateX(-5%);
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+.sk {
+    transform: translateY(-5%);
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+.pj.show,
+.sk.show {
+    transform: translateX(0%);
     opacity: 1;
     transition: 1s ease-in-out;
 }

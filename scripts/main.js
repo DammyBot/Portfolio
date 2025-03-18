@@ -123,6 +123,7 @@ observer.observe(contact_details);
 const texts = document.querySelectorAll(".txt");
 const btn = document.querySelectorAll(".btn");
 const btn1 = document.querySelectorAll(".btn1");
+const contact = document.querySelector(".div");
 const textAnim = new IntersectionObserver((entries)=>{
     entries.forEach(entry => {
         if(entry.isIntersecting){
@@ -132,9 +133,8 @@ const textAnim = new IntersectionObserver((entries)=>{
             entry.target.classList.remove("show");
         }
     })
-}, {
-    threshold: .5
 })
+textAnim.observe(contact);
 texts.forEach(text=>{
     textAnim.observe(text);
 })
@@ -166,6 +166,7 @@ async function loadData(url) {
 function displayData(data) {
     data.forEach(datum => {
         const div = document.createElement("div");
+        div.classList.add("pj");
         const name = document.createElement("h3");
         const img = document.createElement("img");
         const description = document.createElement("p");
@@ -193,14 +194,13 @@ function displayData(data) {
             modal.append(name1, description, link, close);
             modal.showModal();
             document.body.style.overflow = "hidden";
-            // document.onkeydown("escape" , ()=>{
-            //     document.body.style.overflow = "auto";
-            // })
             close.addEventListener("click", ()=>{
                 modal.close();
                 document.body.style.overflow = "auto";
             })
         })
+
+        textAnim.observe(div);
     });
 }
 
@@ -235,6 +235,7 @@ game.addEventListener("click", ()=>{
 
 function displayInfo(datum){
     const div = document.createElement("div");
+    div.classList.add("pj");
     const name = document.createElement("h3");
     const img = document.createElement("img");
     const description = document.createElement("p");
@@ -270,6 +271,7 @@ function displayInfo(datum){
             document.body.style.overflow = "auto";
         })
     })
+    textAnim.observe(div);
 }
 
 loadData(url);
@@ -297,8 +299,11 @@ function displaySkills(data) {
 
 function showData(data, data_item) {
     const div = document.createElement("div");
+    div.classList.add("sk");
     const title = document.createElement("h3");
+    title.classList.add("txt")
     const details = document.createElement("p");
+    details.classList.add("txt")
 
     if(data_item === "programming") {
         title.textContent = "Programming";
@@ -320,6 +325,9 @@ function showData(data, data_item) {
 
     div.append(title,details);
     skillbody.append(div);
+    textAnim.observe(div);
+    textAnim.observe(title);
+    textAnim.observe(details);
 }
 
 loadSkills(skillURL);
