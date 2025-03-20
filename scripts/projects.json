@@ -21,6 +21,41 @@
         "link": "https://dammybot.github.io/web-projects/todo/index.html"
     },
     {
+        "name": "A day in the life Video",
+        "category": "Video",
+        "description": "Edited a compelling documentary-style YouTube video exploring the realities of surviving on minimum wage in Portugal. This project involved: Storytelling Through Editing, Dynamic Visuals & Motion Graphics, Sound Design & Mixing, Seamless Cuts & Transitions which ensured smooth pacing while maintaining authenticity. A paid project that challenged me to blend storytelling with technical precision to deliver an insightful and engaging watch.",
+        "image": "./images/tommy.gif",
+        "link": "https://drive.google.com/file/d/1yQUJHzShPZyLLfR70bHQ6PkEd9LfDbfq/view?usp=sharing"
+    },
+    {
+        "name": "Street Interview Video",
+        "category": "Video",
+        "description": "For a paid project, I had the opportunity to professionally edit a dynamic street interview video. This project allowed me to refine my skills in video pacing, smooth transitions, and storytelling through post-production. I focused on enhancing the flow of conversations, ensuring crisp cuts, and polishing the audio-visual experience to maintain viewer engagement. Working on this edit reinforced my ability to create compelling and high-quality content that aligns with a client's vision while maintaining professional standards.",
+        "image": "./images/miller.gif",
+        "link": "https://drive.google.com/file/d/1yQUJHzShPZyLLfR70bHQ6PkEd9LfDbfq/view?usp=sharing"
+    },
+    {
+        "name": "Short youtube AD",
+        "category": "Video",
+        "description": "Crafted a dynamic and engaging short YouTube ad for a growing content creator, designed to boost visibility and attract new subscribers. This project involved precise editing, strategic pacing, and attention-grabbing visuals to ensure maximum impact. A great opportunity to apply my skills in video editing, motion graphics, and storytelling while delivering a polished final product for a paid client.",
+        "image": "./images/yt.gif",
+        "link": "https://drive.google.com/file/d/1KNgSr03ZsoPBdOBDT4pbvIez28Zm9W_b/view?usp=sharing"
+    },
+    {
+        "name": "CODM torunament thriller",
+        "category": "Video",
+        "description": "Edited a high-intensity Call of Duty Mobile Tournament Thriller for African Championship Leauge. This paid project involved dynamic motion graphics, precise sync to music and SFX, seamless transitions, and high-impact visuals to capture the energy of competitive gameplay. Focused on maintaining pacing, engaging storytelling, and an adrenaline-pumping atmosphere. A thrilling challenge—and an even more rewarding final product! ",
+        "image": "./images/apc.gif",
+        "link": "https://drive.google.com/file/d/1CTGzgUAcyjN-Kkxo8dyUkGxFmmMq7J8y/view?usp=drive_link"
+    },
+    {
+        "name": "CODM tournament ad",
+        "category": "Video",
+        "description": "Commissioned to edit an action-packed Call of Duty Mobile Tournament Thriller. 🎬⚡ Focused on high-impact motion graphics, seamless transitions, and intense sound design to capture the adrenaline of competitive play. Every cut, effect, and beat was crafted to build anticipation and hype for the event. A rewarding project that pushed my creative and technical skills!",
+        "image": "./images/apc1.gif",
+        "link": "https://drive.google.com/file/d/1YAW8lASHPwyCsehwB6v2exIq2CPoUvpx/view?usp=drive_link"
+    },
+    {
         "name": "Muhichiro AMV",
         "category": "Video",
         "description": "A short anime edit I made when I got bored, more like a collaboration video I made with a friend",

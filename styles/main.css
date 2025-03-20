@@ -1,17 +1,29 @@
 :root {
     /* Colors */
-    --background: #121212;
+    --color0: #00FFFF;
+    --color1: #FF007F;
+    --color2: #1C3D5D;
+    --color3: #0F1B2B;
+    --color4: #39FF14;
+    --color5: #FFD700;
+    --color6: #9B4DFF;
+    --color7: #121212;
+    --color8: #0C1C2A;
+
+    --background: #000000;
     --text: #E0E0E0;
     --primary-buttons: #00A8E8;
     --hover-effect: #0085C7;
     --card-background: #1E1E1E;
     --heading-color: #FFFFFF;
+
     /* Fonts */
     --oswald: "Oswald", sans-serif;
     --rubik: "Rubik", sans-serif;
     --chivo: "Chivo", sans-serif;
     --comfortaa: "Comfortaa", sans-serif;
     --nunito: "Nunito", sans-serif;
+
     /* Font Sizes */
     --h1-big: 54px;
     --h1-small: ;
@@ -37,11 +49,10 @@ html {
     list-style-type: none;
     text-decoration: none;
     box-sizing: border-box;
-    /* font-family: var(--oswald); */
 }
 
 body {
-    background-color: var(--background);
+    background-image: linear-gradient(to left, var(--color7), var(--background));
     font-size: 16px;
 }
 
@@ -65,14 +76,13 @@ header {
     position: sticky;
     top: 0;
     left: 0;
-    background-color: var(--background);
+    background-image: linear-gradient(to left, var(--color7), var(--background));
     z-index: 999;
 }
 
 header>a {
     color: var(--heading-color);
     font-family: var(--chivo);
-    /* font-size: 1.5em; */
     transition: .3s ease;
     font-size: 24px;
 }
@@ -103,7 +113,7 @@ header>a:hover {
 }
 
 #navigation .active {
-    color: var(--primary-buttons);
+    color: var(--color0);
 }
 
 #hamburger {
@@ -126,23 +136,15 @@ main {
     margin: auto;
 }
 
-footer {
-    text-align: center;
-    color: white;
-    margin: auto;
-}
-
 main h1 {
     font-family: var(--oswald);
     padding: 10px;
     font-size: var(--h1-big);
 }
 
-main h2,
-footer h2 {
+main h2 {
     font-family: var(--oswald);
     padding: 10px;
-    /* font-size: 24px; */
 }
 
 main p,
@@ -177,13 +179,12 @@ dialog button:hover,
 
 .connect li a {
     color: white;
-    background-color: var(--card-background);
-    color: var(--primary-buttons);
+    background-image: linear-gradient(45deg, var(--color2), var(--color7));
     padding: 10px;
     border-radius: 5px;
     font-family: var(--comfortaa);
     border: 1px solid white;
-    box-shadow: 0 0 .2em black;
+    box-shadow: 0 0 .5em var(--color3);
     font-size: var(--a-big);
 }
 
@@ -214,21 +215,19 @@ dialog button:hover,
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* width: 100%; */
 }
 
 .content button,
 dialog button {
     display: block;
-    background-color: var(--card-background);
-    color: var(--primary-buttons);
+    color: white;
+    background-image: linear-gradient(45deg, var(--color2), var(--color7));
     padding: 10px;
     margin: 5px auto;
     border-radius: 5px;
     font-family: var(--comfortaa);
     border: 1px solid white;
-    box-shadow: 0 0 .2em black;
-    /* font-size: 12px; */
+    box-shadow: 0 0 .5em var(--color3);
     transition: .3s ease;
     cursor: pointer;
 }
@@ -241,7 +240,9 @@ dialog {
     max-width: 90vw;
     padding: 20px;
     border-radius: 10px;
-    /* position: inherit; */
+    animation: dialogshow;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
 }
 
 dialog button {
@@ -252,7 +253,6 @@ dialog button {
 
 dialog h3 {
     font-family: var(--oswald);
-    /* font-size: 24px; */
     padding: 5px;
     margin: 5px;
 }
@@ -265,8 +265,6 @@ dialog p {
 
 dialog a {
     color: var(--primary-buttons);
-    /* padding: 5px; */
-    /* text-decoration: underline; */
     border-bottom: 1px solid var(--primary-buttons);
     margin: 5px;
     transition: .3s ease;
@@ -287,7 +285,6 @@ dialog a:active {
     opacity: .9;
 }
 
-/* The button doesn't stay fixed in place, fix this on your next visit */
 #back-to-top {
     position: fixed;
     bottom: 100%;
@@ -302,24 +299,33 @@ dialog a:active {
 }
 
 #back-to-top.show {
-    /* position: absolute; */
     bottom: 10px;
-    /* right: 0%; */
     filter: opacity(1);
+    animation: rotate;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
 .buttons button {
     padding: 10px;
     margin: 0 5px;
-    box-shadow: 0em 0em .5em black;
+    box-shadow: 0 0 .5em var(--color3);
     font-family: var(--inter);
-    background-image: linear-gradient(45deg, var(--hover-effect), var(--primary-buttons));
     color: white;
+    background-image: linear-gradient(45deg, var(--color2), var(--color7));
     border-radius: 10px;
     border: 1px solid white;
     cursor: pointer;
-    transition: .5s ease;
+    transform: scale(1);
+    transition: .5s ease-in-out;
     font-size: var(--a-big);
+}
+
+.buttons button.click {
+    background-image: linear-gradient(45deg, var(--card-background), var(--hover-effect));
+    transform: scale(1.2);
+    transition: .5s ease-in-out;
 }
 
 .contact {
@@ -398,6 +404,7 @@ dialog a:active {
 .txt,
 .btn,
 .div {
+    color: white;
     transform: translateY(-5%);
     opacity: 0;
     transition: 1s ease-in-out;
@@ -458,6 +465,28 @@ dialog a:active {
     transition: 1s ease-in-out;
 }
 
+@keyframes dialogshow {
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @media screen and (max-width: 38rem) {
     body {
         font-size: 16px;
@@ -494,7 +523,7 @@ dialog a:active {
         overflow: hidden;
         transition: .5s ease;
         border-bottom: none;
-        background-color: var(--card-background);
+        background-image: linear-gradient(45deg, var(--background), var(--color7));
         z-index: -1;
     }
 
@@ -553,7 +582,7 @@ dialog a:active {
     }
 
     .content h3 {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .skills-body {

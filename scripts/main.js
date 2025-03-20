@@ -67,6 +67,7 @@ const home = document.querySelectorAll(".home");
 bodytop.addEventListener("click", ()=>{
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
+    bodytop.classList.remove("show");
 })
 home.forEach(house=>{
     house.addEventListener("click", (event)=>{
@@ -195,6 +196,7 @@ function displayData(data) {
             modal.showModal();
             document.body.style.overflow = "hidden";
             close.addEventListener("click", ()=>{
+                modal.classList.add("remove");
                 modal.close();
                 document.body.style.overflow = "auto";
             })
@@ -205,6 +207,10 @@ function displayData(data) {
 }
 
 web.addEventListener("click", ()=>{
+    web.classList.add("click");
+    all.classList.remove("click");
+    video.classList.remove("click");
+    game.classList.remove("click");
     content.innerHTML = "";
     result.forEach(item=>{
         if(item.category == "Website"){
@@ -213,10 +219,18 @@ web.addEventListener("click", ()=>{
     })
 })
 all.addEventListener("click", ()=>{
+    web.classList.remove("click");
+    all.classList.add("click");
+    video.classList.remove("click");
+    game.classList.remove("click");
     content.innerHTML = "";
     displayData(result);
 })
 video.addEventListener("click", ()=>{
+    web.classList.remove("click");
+    all.classList.remove("click");
+    video.classList.add("click");
+    game.classList.remove("click");
     content.innerHTML = "";
     result.forEach(item=>{
         if(item.category == "Video"){
@@ -225,6 +239,10 @@ video.addEventListener("click", ()=>{
     })
 })
 game.addEventListener("click", ()=>{
+    web.classList.remove("click");
+    all.classList.remove("click");
+    video.classList.remove("click");
+    game.classList.add("click");
     content.innerHTML = "";
     result.forEach(item=>{
         if(item.category == "Game"){
