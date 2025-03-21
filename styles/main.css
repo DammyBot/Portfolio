@@ -58,13 +58,13 @@ body {
 
 main {
     filter: blur(0px);
-    transition: .2s ease;
+    transition: .5s ease-out;
     padding: 10px;
 }
 
 main.open {
     filter: blur(0px);
-    transition: .2s ease;
+    transition: .5s ease;
 }
 
 header {
@@ -179,7 +179,7 @@ dialog button:hover,
 
 .connect li a {
     color: white;
-    background-image: linear-gradient(45deg, var(--color2), var(--color7));
+    background-image: linear-gradient(45deg, var(--color3), var(--color2));
     padding: 10px;
     border-radius: 5px;
     font-family: var(--comfortaa);
@@ -233,7 +233,7 @@ dialog button {
 }
 
 dialog {
-    background-color: var(--card-background);
+    background-image: linear-gradient(to left, var(--color7), var(--background));
     color: white;
     border: 1px solid var(--hover-effect);
     margin: auto;
@@ -241,7 +241,7 @@ dialog {
     padding: 20px;
     border-radius: 10px;
     animation: dialogshow;
-    animation-duration: 1s;
+    animation-duration: .5s;
     animation-timing-function: ease-in-out;
 }
 
@@ -293,7 +293,7 @@ dialog a:active {
     rotate: 315deg;
     cursor: pointer;
     opacity: .7;
-    transition: .5s ease;
+    transition: .5s ease-out;
     filter: opacity(0);
     z-index: 999;
 }
@@ -303,7 +303,7 @@ dialog a:active {
     filter: opacity(1);
     animation: rotate;
     animation-duration: 10s;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in;
     animation-iteration-count: infinite;
 }
 
@@ -565,7 +565,7 @@ dialog a:active {
 
     main.open {
         filter: blur(2px);
-        transition: .2s ease;
+        transition: .5s ease;
     }
 
     main p,
