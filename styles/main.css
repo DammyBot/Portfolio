@@ -1,40 +1,20 @@
 :root {
     /* Colors */
-    --color0: #00FFFF;
-    --color1: #FF007F;
-    --color2: #1C3D5D;
-    --color3: #0F1B2B;
-    --color4: #39FF14;
-    --color5: #FFD700;
-    --color6: #9B4DFF;
-    --color7: #121212;
-    --color8: #0C1C2A;
-
-    --background: #000000;
-    --text: #E0E0E0;
-    --primary-buttons: #00A8E8;
-    --hover-effect: #0085C7;
-    --card-background: #1E1E1E;
-    --heading-color: #FFFFFF;
+    --color0: #fcfdfe;
+    --color1: #373958;
+    --color2: #c73d4a;
+    --color3: #dc9c45;
 
     /* Fonts */
-    --oswald: "Oswald", sans-serif;
-    --rubik: "Rubik", sans-serif;
-    --chivo: "Chivo", sans-serif;
-    --comfortaa: "Comfortaa", sans-serif;
-    --nunito: "Nunito", sans-serif;
+    --general-sans: 'General Sans', sans-serif;
+    --gambetta: 'Gambetta', serif;
 
     /* Font Sizes */
     --h1-big: 54px;
-    --h1-small: ;
     --h2-big: 36px;
-    --h2-small: ;
     --h3-big: 24px;
-    --h3-small: ;
     --p-big: 20px;
-    --p-small: ;
     --a-big: 16px;
-    --a-small: ;
 }
 
 html {
@@ -49,10 +29,12 @@ html {
     list-style-type: none;
     text-decoration: none;
     box-sizing: border-box;
+    font-family: var(--gambetta);
 }
 
 body {
-    background-image: linear-gradient(to left, var(--color7), var(--background));
+    background-color: var(--color0);
+    color: var(--color1);
     font-size: 16px;
 }
 
@@ -72,23 +54,24 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 15px;
-    border-bottom: 1px solid var(--card-background);
+    border-bottom: 1px solid var(--color0);
     position: sticky;
     top: 0;
     left: 0;
-    background-image: linear-gradient(to left, var(--color7), var(--background));
+    background-color: var(--color0);
+    color: var(--color1);
     z-index: 999;
 }
 
 header>a {
-    color: var(--heading-color);
-    font-family: var(--chivo);
+    color: var(--color1);
+    font-family: var(--gambetta);
     transition: .3s ease;
     font-size: 24px;
 }
 
 header>a:hover {
-    color: var(--hover-effect);
+    color: var(--color2);
     transition: .3s ease;
 }
 
@@ -96,62 +79,64 @@ header>a:hover {
     display: flex;
     align-content: center;
     justify-content: space-between;
+    background-color: var(--color0);
 }
 
 #navigation li a {
-    color: var(--text);
-    font-family: var(--chivo);
-    font-size: 16px;
+    color: var(--color1);
+    font-family: var(--gambetta);
+    font-size: 18px;
     padding: 10px;
     margin: 3px;
     transition: .3s ease;
 }
 
 #navigation li a:hover {
-    color: var(--hover-effect);
+    color: var(--color2);
     transition: .3s ease;
 }
 
 #navigation .active {
-    color: var(--color0);
+    color: var(--color3);
 }
 
 #hamburger {
     font-size: 1.5em;
     cursor: pointer;
     display: none;
-    color: white;
+    color: var(--color1);
     transition: .3s ease;
 }
 
 #hamburger:hover {
-    color: var(--hover-effect);
+    color: var(--color2);
     transition: .3s ease;
 }
 
 main {
     text-align: center;
-    color: white;
+    color: var(--color1);
     width: 90vw;
     margin: auto;
 }
 
 main h1 {
-    font-family: var(--oswald);
+    font-family: var(--general-sans);
+    text-align: center;
+    color: var(--color1);
     padding: 10px;
     font-size: var(--h1-big);
 }
 
 main h2 {
-    font-family: var(--oswald);
+    font-family: var(--gambetta);
     padding: 10px;
 }
 
 main p,
 .content p {
-    font-family: var(--nunito);
+    font-family: var(--gambetta);
     font-size: var(--p-big);
-    font-weight: lighter;
     padding: 5px;
 }
 
@@ -178,13 +163,13 @@ dialog button:hover,
 }
 
 .connect li a {
-    color: white;
-    background-image: linear-gradient(45deg, var(--color3), var(--color2));
+    color: var(--color0);
+    background-image: linear-gradient(45deg, var(--color1), var(--color2));
     padding: 10px;
     border-radius: 5px;
-    font-family: var(--comfortaa);
-    border: 1px solid white;
-    box-shadow: 0 0 .5em var(--color3);
+    font-family: var(--gambetta);
+    border: 1px solid var(--color1);
+    box-shadow: 0 0 .5em var(--color1);
     font-size: var(--a-big);
 }
 
@@ -195,18 +180,19 @@ dialog button:hover,
 
 .content img {
     width: 200px;
-    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 0 .25em var(--color1);
 }
 
 .content h3 {
     font-size: 22px;
-    font-family: var(--oswald);
+    font-family: var(--general-sans);
     padding: 5px;
 }
 
 .content div {
-    border: 1px solid var(--card-background);
-    box-shadow: 0em 0em .15em white;
+    border: 1px solid var(--color0);
+    box-shadow: 0em 0em .15em var(--color1);
     border-radius: 10px;
     margin: 15px;
     padding: 10px;
@@ -220,22 +206,26 @@ dialog button:hover,
 .content button,
 dialog button {
     display: block;
-    color: white;
-    background-image: linear-gradient(45deg, var(--color2), var(--color7));
+    color: var(--color0);
+    background-image: linear-gradient(45deg, var(--color1), var(--color2));
     padding: 10px;
     margin: 5px auto;
     border-radius: 5px;
-    font-family: var(--comfortaa);
-    border: 1px solid white;
-    box-shadow: 0 0 .5em var(--color3);
+    font-family: var(--gambetta);
+    font-size: 18px;
+    border: 1px solid var(--color1);
+    box-shadow: 0 0 .5em var(--color1);
     transition: .3s ease;
     cursor: pointer;
 }
+dialog button {
+    background-image: linear-gradient(45deg, var(--color0), var(--color0));
+}
 
 dialog {
-    background-image: linear-gradient(to left, var(--color7), var(--background));
-    color: white;
-    border: 1px solid var(--hover-effect);
+    background-color: var(--color1);
+    color: var(--color0);
+    border: 1px solid var(--color0);
     margin: auto;
     max-width: 90vw;
     padding: 20px;
@@ -252,37 +242,38 @@ dialog button {
 }
 
 dialog h3 {
-    font-family: var(--oswald);
+    font-family: var(--gambetta);
     padding: 5px;
     margin: 5px;
 }
 
 dialog p {
-    font-family: var(--inter);
+    font-family: var(--gambetta);
+    text-align: left;
     margin: 5px;
     padding: 5px;
 }
 
 dialog a {
-    color: var(--primary-buttons);
-    border-bottom: 1px solid var(--primary-buttons);
+    color: var(--color0);
+    border-bottom: 1px solid var(--color2);
     margin: 5px;
     transition: .3s ease;
-    font-family: var(--comfortaa);
+    font-family: var(--gambetta);
 }
 
 dialog a:hover {
-    color: var(--hover-effect);
+    color: var(--color3);
     transition: .3s ease;
 }
 
 dialog a:active {
-    color: var(--background);
+    color: var(--color3);
 }
 
 ::backdrop {
-    background-image: linear-gradient(45deg, var(--card-background), var(--background));
-    opacity: .9;
+    background-color: var(--color2);
+    opacity: .25;
 }
 
 #back-to-top {
@@ -311,11 +302,11 @@ dialog a:active {
     padding: 10px;
     margin: 0 5px;
     box-shadow: 0 0 .5em var(--color3);
-    font-family: var(--inter);
-    color: white;
-    background-image: linear-gradient(45deg, var(--color2), var(--color7));
+    font-family: var(--gambetta);
+    color: var(--color0);
+    background-image: linear-gradient(45deg, var(--color1), var(--color2));
     border-radius: 10px;
-    border: 1px solid white;
+    border: 1px solid var(--color1);
     cursor: pointer;
     transform: scale(1);
     transition: .5s ease-in-out;
@@ -323,38 +314,39 @@ dialog a:active {
 }
 
 .buttons button.click {
-    background-image: linear-gradient(45deg, var(--card-background), var(--hover-effect));
+    background-image: linear-gradient(45deg, var(--color2), var(--color3));
     transform: scale(1.2);
     transition: .5s ease-in-out;
 }
 
 .contact {
     border-radius: 10px;
-    box-shadow: 0em 0em .1em var(--heading-color);
+    box-shadow: 0em 0em .1em var(--color1);
     padding: 10px;
 }
 
 .contact img {
     width: 20px;
+    margin: auto;
 }
 
 .contact a {
     display: block;
     text-align: center;
     margin: 5px;
-    color: var(--primary-buttons);
+    color: var(--color1);
     transition: .2s ease;
-    font-family: var(--nunito);
+    font-family: var(--gambetta);
     font-size: 20px;
 }
 
 .contact a:active {
-    color: var(--background);
+    color: var(--color3);
     transition: .2s ease;
 }
 
 .contact a:hover {
-    color: var(--hover-effect);
+    color: var(--color2);
     transition: .2s ease;
 }
 
@@ -384,8 +376,8 @@ dialog a:active {
 
 .skills-body div {
     padding: 10px;
-    border: 1px solid var(--card-background);
-    box-shadow: 0em 0em .2em var(--heading-color);
+    border: 1px solid var(--color0);
+    box-shadow: 0em 0em .2em var(--color1);
     border-radius: 10px;
     margin: 10px auto;
     width: 90%;
@@ -394,6 +386,7 @@ dialog a:active {
 }
 
 .skills-body div h3 {
+    font-family: var(--general-sans);
     font-size: 24px;
 }
 
@@ -404,10 +397,24 @@ dialog a:active {
 .txt,
 .btn,
 .div {
-    color: white;
+    color: var(--color1);
     transform: translateY(-5%);
     opacity: 0;
     transition: 1s ease-in-out;
+}
+
+#welcome,
+#works,
+#contact,
+#skills {
+    font-family: var(--general-sans);
+    text-align: center;
+}
+
+.txt:nth-of-type(1),
+.txt:nth-of-type(2),
+.txt:nth-of-type(3) {
+    text-align: left;
 }
 
 .bth:nth-of-type(2).show {
@@ -522,14 +529,11 @@ dialog a:active {
         z-index: 1000;
         overflow: hidden;
         transition: .5s ease;
-        border-bottom: none;
-        background-image: linear-gradient(45deg, var(--background), var(--color7));
         z-index: -1;
     }
 
     #navigation.open {
         top: 100%;
-        border-bottom: 1px solid var(--card-background);
         transition: .5s ease;
     }
 
@@ -551,7 +555,7 @@ dialog a:active {
 
     main p {
         font-size: 16px;
-        font-weight: lighter;
+        font-weight: normal;
     }
 
     .contact-container {
