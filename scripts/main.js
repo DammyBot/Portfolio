@@ -98,12 +98,14 @@ contacts.forEach(contact => {
         document.querySelector("main").classList.remove("open");
     })
 })
-const skill = document.querySelector(".skill");
-skill.addEventListener("click", (event)=> {
-    event.preventDefault();
-    document.querySelector(".skills-content").scrollIntoView();
-    navigation.classList.remove("open");
-    document.querySelector("main").classList.remove("open");
+const skills = document.querySelectorAll(".skill");
+skills.forEach(skill=>{
+    skill.addEventListener("click", (event)=> {
+        event.preventDefault();
+        document.querySelector(".skills-content").scrollIntoView();
+        navigation.classList.remove("open");
+        document.querySelector("main").classList.remove("open");
+    })
 })
 
 
