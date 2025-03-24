@@ -181,7 +181,7 @@ function displayData(data) {
         description.textContent = datum.description;
         img.src = datum.image;
         img.alt = `Image of ${datum.name}`;
-        img.loading = "lazy";
+        img.loading = "eager";
         button.textContent = "Check Details";
         close.textContent = "❌";
         link.textContent = `Link to ${datum.name}`;
